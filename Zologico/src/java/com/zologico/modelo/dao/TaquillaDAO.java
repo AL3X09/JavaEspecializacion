@@ -14,8 +14,8 @@ import java.util.List;
  */
 public class TaquillaDAO implements IGenericoDAO<TaquillaVO>{
     Connection cnn;
-    public TaquillaDAO(){
-        this.cnn=cnn;
+    public TaquillaDAO(Connection cnn){
+        this.cnn= cnn;
     }
 
     @Override

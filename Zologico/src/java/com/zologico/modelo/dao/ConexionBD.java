@@ -20,14 +20,26 @@ public class ConexionBD {
         //se invoca libreria que controla drivers de conexion
         Class.forName("com.mysql.jdbc.Driver");
         //Parametros de conexion
-        String url = "jdbc:mysql://db4free.net:3306/pruebahost";
-        String usuario = "al3x";
-        String pass = "AL3X12";
-        //se cre una conexion y se iguala a cnn
-        cnn = DriverManager.getConnection(url, usuario, pass);
-        //POr el momento que no grabe en disco 
+        String url = "jdbc:mysql://sql6.freemysqlhosting.net:3306/";
+        String db = "sql6122001";
+        String usuario = "sql6122001";
+        String pass = "cT5qTwJIfq";
+        //crear conexion
+        cnn = DriverManager.getConnection(url+db, usuario, pass);          
+        try {
+          //Class.forName(driver).newInstance();
+          //conn = DriverManager.getConnection(url+dbName,userName,password);
+            System.out.println("Connected to the database");
+            
+           // return cnn; 
+          //cnn.close();
+          //System.out.println("Disconnected from database");
+      } catch (Exception e) {
+          e.printStackTrace();
+      }
+        //Por el momento que no grabe en disco 
         cnn.setAutoCommit(false);
-        return cnn;
+      return cnn;  
     }
 
     public static void cerrarConexion(Connection cnn) throws SQLException {
@@ -38,3 +50,24 @@ public class ConexionBD {
     }
 
 }
+
+/*
+// To connect to mongodb server
+         MongoClient mongoClient = new MongoClient( "localhost" , 27017 );
+			
+         // Now connect to your databases
+         DB db = mongoClient.getDB( "zologico" );
+         System.out.println("Connect to database successfully");
+			
+         boolean auth = db.authenticate("ALEX", "AL3X12");
+         System.out.println("Authentication: "+auth);
+
+
+
+//se invoca libreria que controla drivers de conexion
+        Class.forName("com.dbschema.MongoJdbcDriver");
+        //Parametros de conexion
+        String url = "jdbc:mongodb://localhost:27017/zologico";
+        String usuario = "ALEX";
+        String pass = "AL3X12";
+*/

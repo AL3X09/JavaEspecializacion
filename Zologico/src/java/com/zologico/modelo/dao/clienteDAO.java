@@ -15,11 +15,11 @@ import java.util.List;
  *
  * @author APRENDIZ
  */
-public class clienteDAO implements IGenericoDAO<ClienteVO>{
+public class ClienteDAO implements IGenericoDAO<ClienteVO>{
     
     Connection cnn;
-    public clienteDAO(){
-    this.cnn=cnn;
+    public ClienteDAO(Connection cnn){
+        this.cnn= cnn;
     }
 
     @Override

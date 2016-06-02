@@ -12,11 +12,11 @@ package utilidades;
 public enum EMensajesError {
     ERROR_BASE_DATOS("Error al conectar"),
     ERROR_BASE_DESCONECTAR("Error al Desconectar"),
-    ERROR_INSERTAR(""),
-    ERROR_MODIFICAR(""),
-    ERROR_CONSUlTAR(""),
-    ERROR_BORRAR(""),
-    ERROR_DRIVER_NO_ENCONTRADO("")
+    ERROR_INSERTAR("Error al insertar"),
+    ERROR_MODIFICAR("Error al modificar"),
+    ERROR_CONSUlTAR("Error al consultar"),
+    ERROR_BORRAR("Error al borrar"),
+    ERROR_DRIVER_NO_ENCONTRADO("Error driver no encontrado")
     ;
     
     String mensaje;

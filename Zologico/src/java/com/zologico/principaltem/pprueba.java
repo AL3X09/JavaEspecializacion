@@ -24,13 +24,13 @@ public class pprueba {
 //             //vo.setfecha(formato.parse("25/11/2016"));
 //             AnimalDAO dao = new AnimalDAO(cnn);
 //             dao.insertar(vo);
-                AnimalController animal = new AnimalController();
+               AnimalController animal = new AnimalController();
                 AnimalVO vo = new AnimalVO();
                 vo.setNombre(JOptionPane.showInputDialog("ingrese nombre del animal"));
                 vo.setIdJaula(1);
                 animal.insertar(vo);
                 animal.cerrarConexion();
-             //ConexionBD.cerrarConexion(cnn);
+             ConexionBD.cerrarConexion(cnn);
              JOptionPane.showMessageDialog(null,"Datos Guardados");
              
          }catch(ClassNotFoundException e){
